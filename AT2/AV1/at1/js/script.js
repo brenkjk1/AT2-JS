@@ -26,7 +26,7 @@ btnAdicionar.addEventListener('click', function () {
         return;
     }
 
-    if (registros.length < 50) {
+    if (registros.length < 3) {
         registros.push({ nome, idade, salario, sexo });
         sessionStorage.setItem('registros', JSON.stringify(registros));
         nomeInput.value = '';
@@ -35,10 +35,10 @@ btnAdicionar.addEventListener('click', function () {
         sexoSelect.value = '';
     }
 
-    if (registros.length === 50) {
+    if (registros.length === 3) {
         exibirRegistros();
     } else {
-        alert(`Registros: ${registros.length}/50. Continue preenchendo!`);
+        alert(`Registros: ${registros.length}/3. Continue preenchendo!`);
     }
 });
 
